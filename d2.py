@@ -1,5 +1,7 @@
 import re
+from my_utils import get_input_for_day
 
+WHICH_DAY = 2
 MAX_COLORS = {"blue": 14, "red": 12, "green": 13}
 
 
@@ -42,8 +44,7 @@ def main():
     score_part_1 = 0
     score_part_2 = 0
 
-    with open("input.txt") as f:
-        lines = f.readlines()
+    lines = get_input_for_day(WHICH_DAY)
 
     for id, line in enumerate(lines):
         line = re.sub("Game ([1-9]|[1-9]\d|100):", "", line.strip())
